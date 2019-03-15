@@ -38,7 +38,6 @@ float Kd = 40; //(Kp-1)*10
 
 void pid_calc();
 void calc_turn();
-void stop_motors();
 void motor_drive(int , int );
 
 void setup()
