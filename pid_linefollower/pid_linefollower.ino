@@ -3,7 +3,7 @@
  *   
  *   NOTE: This code hasn't been tested on a robot, so values for Kp, Ki, Kd, set point etc are dummy values.
  *   
- *   Developed by Vinamr L. Sachdeva 
+ *   Developer: Vinamr L. Sachdeva 
 */
 
 long sensor[] = {0, 0, 0, 0, 0}; //leftmost - 0, rightmost - 4
