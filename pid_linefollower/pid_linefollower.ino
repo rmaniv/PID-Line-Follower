@@ -55,9 +55,9 @@ void setup()
   pinMode(lmf, OUTPUT);
   pinMode(lmb, OUTPUT);
 
-  //finding set point
-  
   Serial.begin(9600);
+  
+  //finding set point
 
   while(button)
   {
