@@ -1,8 +1,5 @@
 /*  
  *   PID Line Follower
- *   
- *   NOTE: This code hasn't been tested on a robot, so values for Kp, Ki, Kd, set point etc are dummy values.
- *   
  *   Developer: Vinamr L. Sachdeva 
 */
 
@@ -32,8 +29,8 @@ float error;
 float correction;
 float sp;
 
-float Kp = 5;
-float Ki = 0;
+float Kp = 5; // dummy
+float Ki = 0; //dummy
 float Kd = 40; //(Kp-1)*10
 
 void pid_calc();
