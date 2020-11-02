@@ -3,7 +3,7 @@
  *   Developer: Vinamr L. Sachdeva 
 */
 
-long sensor[] = {0, 0, 0, 0, 0}; //leftmost - 0, rightmost - 4
+long sensor[] = {0, 1, 2, 3, 4}; //leftmost - 0, rightmost - 4
 
 int rmf = 9;
 int rmb = 6;
