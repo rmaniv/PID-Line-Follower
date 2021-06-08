@@ -3,16 +3,17 @@
  *   Developer: Vinamr L. Sachdeva 
 */
 
+//Hardware pins
 long sensor[] = {0, 1, 2, 3, 4}; //leftmost - 0, rightmost - 4
 
-int rmf = 9;
-int rmb = 6;
-int lmf = 10; 
-int lmb = 11;
+int rmf = 9; //Right motor forward
+int rmb = 6; //Right motor backward
+int lmf = 10; // Left motor forward
+int lmb = 11; // Left motor backward
 
 //speeds
-int rspeed;
-int lspeed;
+int rspeed; //right speed
+int lspeed; //left speed
 const int base_speed = 255;
 
 int pos;
@@ -21,6 +22,7 @@ int sensor_sum;
 
 int button = 3; //to be pressed to find set point
 
+// pid parameters
 float p;
 float i;
 float d;
@@ -84,16 +86,18 @@ void setup()
 
 void loop()
 {
-  pid_calc();
-  calc_turn();
+  pid_calc(); //calculate parameters
+  calc_turn(); //calculate turning
 }
 
 void pid_calc()
 {
+  //initialize to 0
   sensor_average = 0;
   sensor_sum = 0;
   i = 0;
 
+  //taking readings
   for(int i = -2; i <= 2; i++)
   {
     sensor[i]=analogRead(i);
@@ -102,7 +106,8 @@ void pid_calc()
   }
 
   pos = int(sensor_average / sensor_sum);
-
+  
+  //calculate pid parameters
   error = pos-sp;
 
   p = error;
